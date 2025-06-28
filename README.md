@@ -1,2 +1,2 @@
 # GFGBruteAndBetter
-dsa codes (brute force AND  better solution and optimisedis on leetcode)
+dsa codes (brute force  or better solution and optimisedis on leetcode)
