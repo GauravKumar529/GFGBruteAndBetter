@@ -4,21 +4,19 @@ class Solution {
 
     vector<int> count_NGE(vector<int> &arr, vector<int> &indices) {
         // code here
-        vector<int > res;
-        int n = arr.size();
-        int m =indices.size();
-        int j = 0;
+        int n  = arr.size();
+        vector<int> res;
+        int m = indices.size();
+        int i = 0;
         while(m--){
-            int cnt =0 ;
-            int i;
-            for(i = 0 ; i < n;i++){
-                if(arr[i] == indices[j]) break;
+            int cnt= 0;
+            int val = arr[indices[i]];
+            for(int j =  indices[i]; j< n;j++){
+                if(arr[j] >   val) cnt++;
             }
-            for(int  k = i+1 ; k< n;k++){
-                if(arr[k] > indices[j]) cnt++;
-            }
-            res.push_back(cnt);
-            j++;
+            res.push_back(cnt );
+            
+            i++;
         }
         return res ;
         
