@@ -16,13 +16,13 @@ class Solution {
   public:
     void mirror(Node* root) {
         // code here
-        if(!root )  return ;
-        Node *temp = root->right ;
-        root->right  =  root->left ;
-        root->left  = temp;
-        
+        if(root == nullptr ) return ;
+        // if(!root->left )
+        Node* temp = root->left ;
+        root->left  = root->right ;
+        root->right  = temp ;
         mirror(root->left );
         mirror(root->right);
-        // return ;
-    }
+        
+    } 
 };
